@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/initialView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Button.FirstLogin"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/space_large"
+            android:text="@string/login_text" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/Button.FirstLogin"
+            android:layout_below="@+id/btnLogin"
+            android:text="@string/register_text" />
+    </RelativeLayout>
+</LinearLayout>
