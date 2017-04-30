@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">VaVedem</string>
+    <string name="app_name">Va Vedem</string>
+    <string name="app_menu">Menu</string>
     <string name="login_text">Login</string>
     <string name="register_text">Register</string>
     <string name="register_email">Email</string>

@@ -21,10 +21,12 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        supportActionBar?.setHomeAsUpIndicator(getTintedDrawable(R.drawable.menu, R.color.colorAccent))
+        setSupportActionBar(toolbar)
+        supportActionBar?.setHomeAsUpIndicator(getTintedDrawable(R.drawable.menu, R.color.white))
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
         supportActionBar?.setDisplayShowTitleEnabled(false);
+
+
         navigation_view.setNavigationItemSelectedListener { menuItem ->
             drawer_layout.closeDrawers();
             when (menuItem.itemId) {
@@ -58,15 +60,6 @@ class HomeActivity : BaseActivity() {
         } else {
             super.onBackPressed()
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_full_home, menu);
-        var drawable = menu.findItem(R.id.action_messages).getIcon();
-        drawable = DrawableCompat.wrap(drawable);
-        DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.colorAccent));
-        menu.findItem(R.id.action_messages).icon = drawable;
-        return true;
     }
 
     fun getTintedDrawable(@DrawableRes drawableResId: Int, @ColorRes colorResId: Int): Drawable? {
