@@ -18,4 +18,5 @@
     <string name="user_done">Done</string>
     <string name="action_logout">Log out</string>
     <string name="menu_message">Messages</string>
+    <string name="visitor_text">Continue as visitor</string>
 </resources>

@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_heading"
-            android:textColor="@color/floodlight_blue"
+            android:textColor="@color/white"
             android:gravity="center"
             android:layout_gravity="center"
             android:textAllCaps="true"
@@ -22,6 +22,7 @@
         android:id="@+id/registerView"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/space_medium"
+        android:elevation="@dimen/space_small"
         android:layout_height="match_parent">
 
         <android.support.design.widget.TextInputLayout
@@ -85,7 +86,7 @@
 
         <Button
             android:id="@+id/btnRegisterConfirm"
-            style="@style/Button.EntryLogin"
+            style="@style/Button.FirstLogin"
             android:layout_below="@+id/register_password2_wrapper"
             android:layout_marginTop="@dimen/space_small"
             android:text="@string/register_text" />

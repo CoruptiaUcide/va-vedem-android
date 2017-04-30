@@ -2,21 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/imageLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="visible">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vedem_transparent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/initialView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="visible">
 
         <Button
             android:id="@+id/btnLogin"
@@ -30,5 +42,14 @@
             style="@style/Button.FirstLogin"
             android:layout_below="@+id/btnLogin"
             android:text="@string/register_text" />
+
+
+        <Button
+            android:id="@+id/btnVisitor"
+            style="@style/Button.FirstLogin"
+            android:layout_below="@+id/btnRegister"
+            android:text="@string/visitor_text" />
+
+
     </RelativeLayout>
 </LinearLayout>

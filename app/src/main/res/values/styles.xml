@@ -16,8 +16,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
-        <item name="titleTextColor">@color/floodlight_blue</item>
-        <item name="colorAccent">@color/floodlight_blue</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="colorAccent">@color/white</item>
         <item name="colorControlActivated">@color/colorAccent</item>
     </style>
 
@@ -52,7 +52,7 @@
     <style name="Button" parent="BaseButton" />
 
     <style name="Button.EntryLogin">
-        <item name="android:textColor">@color/floodlight_blue</item>
+        <item name="android:textColor">@color/dark_blue</item>
         <item name="android:layout_marginRight">@dimen/space_large</item>
         <item name="android:layout_marginLeft">@dimen/space_large</item>
         <item name="android:layout_marginTop">@dimen/space_small</item>
@@ -61,7 +61,7 @@
     </style>
 
     <style name="Button.FirstLogin">
-        <item name="android:textColor">@color/floodlight_blue</item>
+        <item name="android:textColor">@color/white_color_selector</item>
         <item name="android:layout_marginRight">@dimen/space_large</item>
         <item name="android:layout_marginLeft">@dimen/space_large</item>
         <item name="android:layout_marginTop">@dimen/space_small</item>
@@ -74,7 +74,7 @@
         <item name="android:paddingRight">@dimen/space_small</item>
         <!--<item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>-->
         <item name="android:textColorHint">@color/colorPrimaryDark</item>
-        <item name="android:textColor">@color/floodlight_blue</item>
+        <item name="android:textColor">@color/dark_blue</item>
         <item name="android:textSize">@dimen/text_body</item>
         <item name="android:gravity">center</item>
         <item name="android:drawablePadding">@dimen/space_micro</item>
@@ -89,9 +89,9 @@
         <item name="android:gravity">start</item>
         <item name="android:layout_marginLeft">@dimen/space_small</item>
         <item name="android:layout_marginRight">@dimen/space_small</item>
-        <item name="android:textColor">@color/floodlight_blue</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textColorHint">@color/light_grey</item>
-        <item name="android:backgroundTint">@color/floodlight_blue</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
         <item name="android:textColorSecondary">@android:color/transparent</item>
     </style>
 
@@ -112,6 +112,6 @@
 
 
     <style name="TextView.Small.Blue">
-        <item name="android:textColor">@color/floodlight_blue</item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 </resources>

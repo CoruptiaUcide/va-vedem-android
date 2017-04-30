@@ -18,5 +18,9 @@ class FirstActivity : BaseActivity() {
         btnRegister.setOnClickListener {
             startActivity(Intent(this@FirstActivity, RegisterActivity::class.java))
         }
+
+        btnVisitor.setOnClickListener {
+            startActivity(Intent(this@FirstActivity, HomeActivity::class.java))
+        }
     }
 }

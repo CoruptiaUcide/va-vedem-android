@@ -11,7 +11,7 @@ import com.coruptiaucide.vavedem.R
 abstract class BaseActivity : AppCompatActivity(){
     fun displayCloseButton() {
         val back = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material)
-        back.setColorFilter(ContextCompat.getColor(this, R.color.floodlight_blue), PorterDuff.Mode.SRC_ATOP)
+        back.setColorFilter(ContextCompat.getColor(this, R.color.white), PorterDuff.Mode.SRC_ATOP)
         supportActionBar?.setHomeAsUpIndicator(back)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
