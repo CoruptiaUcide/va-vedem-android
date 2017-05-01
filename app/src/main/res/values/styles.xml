@@ -24,7 +24,6 @@
     <style name="LoginTheme" parent="Base.LoginTheme" />
 
 
-
     <style name="BaseButton" parent="android:Widget.Holo.Light.Button">
         <item name="android:textSize">@dimen/text_body</item>
         <item name="android:minHeight">@dimen/btn_min_height</item>
@@ -112,6 +111,10 @@
 
 
     <style name="TextView.Small.Blue">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextView.Blue">
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 </resources>

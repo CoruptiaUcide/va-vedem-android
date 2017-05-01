@@ -20,4 +20,7 @@
     <string name="action_logout">Log out</string>
     <string name="menu_message">Messages</string>
     <string name="visitor_text">Continue as visitor</string>
+    <string name="cerere_empty_state_text">Nu aveti nicio cerere inregistrata! Daca aveti nevoie de informatii, cititi materialul apasand pe textul de jos.</string>
+    <string name="cerere_empty_state_info"><u>Informatii cereri</u></string>
+    <string name="cerere_empty_state_adaugare"><u>Depune cerere</u></string>
 </resources>

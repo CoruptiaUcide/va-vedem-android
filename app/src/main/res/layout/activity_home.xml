@@ -30,9 +30,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:text="@string/app_name"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:text="@string/app_name"
                     android:textSize="@dimen/text_heading" />
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
@@ -41,8 +41,59 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:elevation="@dimen/space_medium">
+            android:elevation="@dimen/space_medium"
+            android:orientation="vertical">
 
+            <com.coruptiaucide.vavedem.utils.EmptyStateRecyclerView
+                android:id="@+id/rv_cereri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/space_micro"
+                android:paddingTop="@dimen/space_micro" />
+
+
+            <LinearLayout
+                android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_medium"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/cerereImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_cereri_empty" />
+
+                <TextView
+                    android:id="@+id/cerereText"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_large"
+                    android:text="@string/cerere_empty_state_text" />
+
+                <TextView
+                    android:id="@+id/cerereInfo"
+                    style="@style/TextView.Blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_medium"
+                    android:text="@string/cerere_empty_state_info" />
+
+                <TextView
+                    android:id="@+id/cerereAdd"
+                    style="@style/TextView.Blue"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_micro_small"
+                    android:padding="@dimen/space_micro"
+                    android:text="@string/cerere_empty_state_adaugare" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

@@ -6,17 +6,25 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.annotation.ColorRes
 import android.support.annotation.DrawableRes
+import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v4.view.GravityCompat
-import android.view.Menu
-import android.view.MenuItem
+import android.view.*
 import com.coruptiaucide.vavedem.api.PrefManager
 import com.coruptiaucide.vavedem.R
+import com.coruptiaucide.vavedem.api.model.Cerere
+import com.coruptiaucide.vavedem.utils.EmptyStateRecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
+import android.graphics.drawable.StateListDrawable
+import android.graphics.drawable.LayerDrawable
+
 
 class HomeActivity : BaseActivity() {
 
+    internal var mAdapter: EmptyStateRecyclerView.SimpleAdapter<Cerere, CerereViewHolder>? = null
+
+    lateinit var mRecyclerView: EmptyStateRecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +33,6 @@ class HomeActivity : BaseActivity() {
         supportActionBar?.setHomeAsUpIndicator(getTintedDrawable(R.drawable.menu, R.color.white))
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
         supportActionBar?.setDisplayShowTitleEnabled(false);
-
-
         navigation_view.setNavigationItemSelectedListener { menuItem ->
             drawer_layout.closeDrawers();
             when (menuItem.itemId) {
@@ -38,6 +44,13 @@ class HomeActivity : BaseActivity() {
             }
             true
         }
+        mRecyclerView = findViewById(R.id.rv_cereri) as EmptyStateRecyclerView
+        mAdapter = createAdapter()
+        mRecyclerView.emptyView = findViewById(android.R.id.empty)
+        mRecyclerView.adapter = mAdapter
+        (cerereImg.background as LayerDrawable).findDrawableByLayerId(R.id.image)
+                .setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.colorAccent), PorterDuff.Mode.SRC_IN)
+        mAdapter!!.setData(emptyList())
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -47,6 +60,9 @@ class HomeActivity : BaseActivity() {
         when (item.itemId) {
             android.R.id.home -> {
                 drawer_layout.openDrawer(GravityCompat.START)
+                return true
+            }
+            R.id.action_statistics -> {
                 return true
             }
         }
@@ -62,11 +78,33 @@ class HomeActivity : BaseActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_full_home, menu)
+        return true
+    }
+
     fun getTintedDrawable(@DrawableRes drawableResId: Int, @ColorRes colorResId: Int): Drawable? {
         if (drawableResId == 0) return null
         val drawable = ContextCompat.getDrawable(this, drawableResId).mutate()
         val color = ContextCompat.getColor(this, colorResId)
         drawable.setColorFilter(color, PorterDuff.Mode.SRC_IN);
         return drawable;
+    }
+
+    internal fun createAdapter(): EmptyStateRecyclerView.SimpleAdapter<Cerere, CerereViewHolder> {
+        return object : EmptyStateRecyclerView.SimpleAdapter<Cerere, CerereViewHolder>() {
+            override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): CerereViewHolder {
+                return CerereViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.view_item_cerere, viewGroup, false), this@HomeActivity)
+            }
+        }
+    }
+
+    internal class CerereViewHolder(itemView: View, activity: HomeActivity) : EmptyStateRecyclerView.SimpleViewHolder<Cerere>(itemView, activity) {
+        override fun bind(item: Cerere) {
+            itemView.apply {
+
+            }
+        }
+
     }
 }

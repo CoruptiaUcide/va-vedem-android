@@ -8,4 +8,5 @@
     <color name="dark_blue">#191981</color>
     <color name="facebook_blue">#3B5998</color>
     <color name="black">#000000</color>
+    <color name="controlHighlight">#F0F1F4</color>
 </resources>
