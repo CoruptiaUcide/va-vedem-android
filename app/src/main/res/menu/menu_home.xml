@@ -2,6 +2,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.activities.HomeActivity">
+    <group android:id="@+id/cereri">
+        <item
+            android:id="@+id/action_depune_cerere"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="@string/menu_depunere"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_info_cerere"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="@string/menu_info"
+            app:showAsAction="never" />
+    </group>
+
+    <group android:id="@+id/noi">
+        <item
+            android:id="@+id/action_noi"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="@string/menu_noi"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_contact"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="@string/menu_contact"
+            app:showAsAction="never" />
+    </group>
+
     <group android:id="@+id/logout">
         <item
             android:id="@+id/action_logout"

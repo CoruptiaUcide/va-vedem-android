@@ -9,7 +9,7 @@
     <string name="password_hint">Password(minimum 8 characters)</string>
     <string name="password_confirm_hint">Confirm password</string>
     <string name="error_email">Please enter a valid e-mail</string>
-    <string name="error_password">Please provide a viable password ( minimum 8 characters)</string>
+    <string name="error_password">Pleasemenu_info provide a viable password ( minimum 8 characters)</string>
     <string name="error_password_missmatch">Your passwords don\'t match</string>
     <string name="button_forgot_passowrd">Forgot password?</string>
     <string name="button_reset_password">Reset Password</string>
@@ -21,6 +21,11 @@
     <string name="menu_message">Messages</string>
     <string name="visitor_text">Continue as visitor</string>
     <string name="cerere_empty_state_text">Nu aveti nicio cerere inregistrata! Daca aveti nevoie de informatii, cititi materialul apasand pe textul de jos.</string>
-    <string name="cerere_empty_state_info"><u>Informatii cereri</u></string>
-    <string name="cerere_empty_state_adaugare"><u>Depune cerere</u></string>
+    <string name="cerere_empty_state_info"><u>Informatii Cereri</u></string>
+    <string name="cerere_empty_state_adaugare"><u>Depune Cerere</u></string>
+    <string name="menu_info">Informatii Cereri</string>
+    <string name="menu_depunere">Depune Cerere</string>
+    <string name="menu_noi">Despre Noi</string>
+    <string name="menu_contact">Contact Echipa</string>
+
 </resources>
