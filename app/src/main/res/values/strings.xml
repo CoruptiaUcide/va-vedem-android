@@ -27,5 +27,8 @@
     <string name="menu_depunere">Depune Cerere</string>
     <string name="menu_noi">Despre Noi</string>
     <string name="menu_contact">Contact Echipa</string>
+    <string name="menu_statistica">Statistica</string>
+    <string name="menu_primarii">Primarii</string>
+    <string name="view_eroare">View-ul nu a putut fi initializat</string>
 
 </resources>

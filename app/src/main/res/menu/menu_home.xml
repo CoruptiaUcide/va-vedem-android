@@ -4,6 +4,11 @@
     tools:context=".ui.activities.HomeActivity">
     <group android:id="@+id/cereri">
         <item
+            android:id="@+id/action_primarii"
+            android:icon="@drawable/ic_primarie"
+            android:title="@string/menu_primarii"
+            app:showAsAction="never" />
+        <item
             android:id="@+id/action_depune_cerere"
             android:icon="@drawable/ic_assignment_black_24dp"
             android:title="@string/menu_depunere"

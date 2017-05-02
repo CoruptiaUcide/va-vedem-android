@@ -21,6 +21,7 @@ class FirstActivity : BaseActivity() {
 
         btnVisitor.setOnClickListener {
             startActivity(Intent(this@FirstActivity, HomeActivity::class.java))
+            this.finish()
         }
     }
 }

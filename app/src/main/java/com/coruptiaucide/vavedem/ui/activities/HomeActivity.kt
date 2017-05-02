@@ -41,6 +41,18 @@ class HomeActivity : BaseActivity() {
                     startActivity(Intent(this@HomeActivity, FirstActivity::class.java))
                     this.finish()
                 }
+                R.id.action_depune_cerere -> {
+                    startActivity(SecondaryActivity.createViewDepuneCerere(this@HomeActivity))
+                }
+                R.id.action_info_cerere -> {
+                    startActivity(SecondaryActivity.createViewInfoCerere(this@HomeActivity))
+                }
+                R.id.action_noi -> {
+                    startActivity(SecondaryActivity.createViewDespreNoi(this@HomeActivity))
+                }
+                R.id.action_primarii -> {
+                    startActivity(SecondaryActivity.createViewPrimarie(this@HomeActivity))
+                }
             }
             true
         }
@@ -63,6 +75,7 @@ class HomeActivity : BaseActivity() {
                 return true
             }
             R.id.action_statistics -> {
+                startActivity(SecondaryActivity.createViewStatistica(this@HomeActivity))
                 return true
             }
         }
