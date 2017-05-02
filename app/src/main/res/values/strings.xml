@@ -4,22 +4,22 @@
     <string name="login_text">Login</string>
     <string name="register_text">Register</string>
     <string name="register_email">Email</string>
-    <string name="email_hint">Email adress</string>
-    <string name="register_password">Password</string>
-    <string name="password_hint">Password(minimum 8 characters)</string>
-    <string name="password_confirm_hint">Confirm password</string>
-    <string name="error_email">Please enter a valid e-mail</string>
-    <string name="error_password">Pleasemenu_info provide a viable password ( minimum 8 characters)</string>
-    <string name="error_password_missmatch">Your passwords don\'t match</string>
-    <string name="button_forgot_passowrd">Forgot password?</string>
-    <string name="button_reset_password">Reset Password</string>
-    <string name="password_missmatch">Please check your passwords</string>
-    <string name="user_description">Description</string>
+    <string name="email_hint">Adresa email</string>
+    <string name="register_password">Parola</string>
+    <string name="password_hint">Parola(minim 8 caractere)</string>
+    <string name="password_confirm_hint">Confirmare parola</string>
+    <string name="error_email">Va rog folositi un e-mail valid</string>
+    <string name="error_password">Va rog folositi o parola valida(minim 8 caractere)</string>
+    <string name="error_password_missmatch">Ati folosit parole diferite</string>
+    <string name="button_forgot_passowrd">Ai uitat parola?</string>
+    <string name="button_reset_password">Resetare Parola</string>
+    <string name="password_missmatch">Ati folosit parole diferite</string>
+    <string name="user_description">Descriere</string>
     <string name="user_edit">Edit</string>
     <string name="user_done">Done</string>
     <string name="action_logout">Log out</string>
     <string name="menu_message">Messages</string>
-    <string name="visitor_text">Continue as visitor</string>
+    <string name="visitor_text">Continua ca vizitator</string>
     <string name="cerere_empty_state_text">Nu aveti nicio cerere inregistrata! Daca aveti nevoie de informatii, cititi materialul apasand pe textul de jos.</string>
     <string name="cerere_empty_state_info"><u>Informatii Cereri</u></string>
     <string name="cerere_empty_state_adaugare"><u>Depune Cerere</u></string>
@@ -30,5 +30,5 @@
     <string name="menu_statistica">Statistica</string>
     <string name="menu_primarii">Primarii</string>
     <string name="view_eroare">View-ul nu a putut fi initializat</string>
-
+    <string name="email_titlu"></string>
 </resources>

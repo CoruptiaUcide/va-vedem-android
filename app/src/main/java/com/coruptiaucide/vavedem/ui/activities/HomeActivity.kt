@@ -18,6 +18,7 @@ import com.coruptiaucide.vavedem.utils.EmptyStateRecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
 import android.graphics.drawable.StateListDrawable
 import android.graphics.drawable.LayerDrawable
+import android.net.Uri
 
 
 class HomeActivity : BaseActivity() {
@@ -52,6 +53,13 @@ class HomeActivity : BaseActivity() {
                 }
                 R.id.action_primarii -> {
                     startActivity(SecondaryActivity.createViewPrimarie(this@HomeActivity))
+                }
+                R.id.action_contact -> {
+                    val intent = Intent(Intent.ACTION_SENDTO)
+                    intent.data = Uri.parse("mailto:tgol@itu.dk") // only email apps should handle this
+                    if (intent.resolveActivity(packageManager) != null) {
+                        startActivity(intent)
+                    }
                 }
             }
             true
