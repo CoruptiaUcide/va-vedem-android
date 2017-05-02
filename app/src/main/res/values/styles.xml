@@ -48,11 +48,6 @@
         <item name="maxButtonHeight">?attr/actionBarSize</item>
     </style>
 
-    <style name="Toolbar.AllCaps" parent="Toolbar">
-        <item name="android:textAllCaps">true</item>
-    </style>
-
-
     <style name="Button" parent="BaseButton" />
 
     <style name="Button.EntryLogin">

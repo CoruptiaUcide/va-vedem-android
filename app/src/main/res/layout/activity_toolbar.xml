@@ -19,11 +19,11 @@
             style="@style/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
-            android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="@dimen/text_heading"
-            android:visibility="gone" />
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+           />
     </android.support.v7.widget.Toolbar>
 </FrameLayout>

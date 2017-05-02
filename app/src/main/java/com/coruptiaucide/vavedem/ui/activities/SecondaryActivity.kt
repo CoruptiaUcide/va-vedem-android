@@ -61,26 +61,27 @@ class SecondaryActivity : BaseActivity() {
 
         setContentView(R.layout.activity_toolbar)
         displayCloseButton()
+        title = ""
         val fragment: Fragment
         when (mType) {
             ModalType.PRIMARII -> {
-                title = getString(R.string.menu_primarii)
+                tv_title.text = getString(R.string.menu_primarii)
                 fragment = PrimariiFragment()
             }
             ModalType.DESPRE_NOI -> {
-                title = getString(R.string.menu_noi)
+                tv_title.text = getString(R.string.menu_noi)
                 fragment = DespreNoiFragment()
             }
             ModalType.STATISTICA -> {
-                title = getString(R.string.menu_statistica)
+                tv_title.text = getString(R.string.menu_statistica)
                 fragment = StatisticaFragment()
             }
             ModalType.DEPUNE_CERERE -> {
-                title = getString(R.string.menu_depunere)
+                tv_title.text = getString(R.string.menu_depunere)
                 fragment = CerereFragment()
             }
             ModalType.INFO_CERERE -> {
-                title = getString(R.string.menu_info)
+                tv_title.text= getString(R.string.menu_info)
                 fragment = InfoCerereFragment()
             }
             else -> {
