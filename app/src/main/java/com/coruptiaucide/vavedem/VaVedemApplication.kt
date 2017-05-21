@@ -5,12 +5,13 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.coruptiaucide.vavedem.api.Api
 import com.coruptiaucide.vavedem.api.PrefManager
+import com.coruptiaucide.vavedem.api.database.VaVedemSQLiteHelper
 import com.coruptiaucide.vavedem.utils.ProgressDialogFragment
 
 
 const val PROGRESS_FRAGMENT_TAG = "progress"
 
-class VaVedemApplication: Application() {
+class VaVedemApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -25,6 +26,11 @@ class VaVedemApplication: Application() {
 
         fun isLoggedIn(): Boolean {
             return PrefManager.sessionId != null
+        }
+
+        fun logout() {
+            VaVedemSQLiteHelper.instance.clear(VaVedemSQLiteHelper.instance.writableDatabase)
+            PrefManager.clearSession()
         }
 
 
