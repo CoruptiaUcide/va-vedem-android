@@ -16,9 +16,17 @@ import com.coruptiaucide.vavedem.R
 import com.coruptiaucide.vavedem.api.model.Cerere
 import com.coruptiaucide.vavedem.utils.EmptyStateRecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
-import android.graphics.drawable.StateListDrawable
+import com.coruptiaucide.vavedem.utils.DateExtensions.toMediumDateString
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
+import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
+import com.coruptiaucide.vavedem.api.model.Adresa
+import com.coruptiaucide.vavedem.api.model.Primarie
+import com.coruptiaucide.vavedem.utils.SimpleDividerItemDecoration
+import com.coruptiaucide.vavedem.utils.SpaceDividerItemDecoration
+import kotlinx.android.synthetic.main.view_item_cerere.view.*
+import java.util.*
 
 
 class HomeActivity : BaseActivity() {
@@ -65,11 +73,14 @@ class HomeActivity : BaseActivity() {
             true
         }
         mRecyclerView = findViewById(R.id.rv_cereri) as EmptyStateRecyclerView
+        mRecyclerView.layoutManager = LinearLayoutManager(this@HomeActivity, LinearLayoutManager.VERTICAL, false)
         mAdapter = createAdapter()
         mRecyclerView.emptyView = findViewById(android.R.id.empty)
         mRecyclerView.adapter = mAdapter
+        mRecyclerView.addItemDecoration(SimpleDividerItemDecoration(ContextCompat.getDrawable(this@HomeActivity, R.drawable.simple_divider)))
         (cerereImg.background as LayerDrawable).findDrawableByLayerId(R.id.image)
                 .setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.colorAccent), PorterDuff.Mode.SRC_IN)
+        var mockedList = ArrayList<Cerere>()
         mAdapter!!.setData(emptyList())
     }
 
@@ -123,7 +134,10 @@ class HomeActivity : BaseActivity() {
     internal class CerereViewHolder(itemView: View, activity: HomeActivity) : EmptyStateRecyclerView.SimpleViewHolder<Cerere>(itemView, activity) {
         override fun bind(item: Cerere) {
             itemView.apply {
-
+                tvNume.text = item.primarie.nume
+                tvTip.text = item.tip
+                tvData.text = item.data.toMediumDateString()
+                ivCerere.setOnClickListener { context.startActivity(SecondaryActivity.createViewCerere(context)) }
             }
         }
 

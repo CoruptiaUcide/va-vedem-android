@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:paddingBottom="@dimen/space_micro_small"
+    android:paddingLeft="@dimen/space_medium"
+    android:paddingRight="@dimen/space_medium"
+    android:paddingTop="@dimen/space_micro_small">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/tvData"
+        style="@style/TextView.Subheading.Blue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:text="18 Ian 2017" />
+
+    <TextView
+        android:id="@+id/tvNume"
+        style="@style/TextView.Black"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvData"
+        android:layout_marginTop="@dimen/space_nano"
+        tools:text="Primaria Bucuresti Sector 1" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        style="@style/TextView.Subheading.LightGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvNume"
+        android:layout_marginTop="@dimen/space_nano"
+        tools:text="Cerere spatii verzi" />
+
+    <com.coruptiaucide.vavedem.utils.TintedImageView
+        android:id="@+id/ivCerere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_menu_view"
+        android:tint="@color/light_blue" />
+</RelativeLayout>

@@ -26,7 +26,8 @@ private enum class ModalType : Serializable {
     DESPRE_NOI,
     STATISTICA,
     DEPUNE_CERERE,
-    INFO_CERERE
+    INFO_CERERE,
+    CERERE
 }
 
 class SecondaryActivity : BaseActivity() {
@@ -50,6 +51,7 @@ class SecondaryActivity : BaseActivity() {
         fun createViewDepuneCerere(context: Context) = createIntent(context, ModalType.DEPUNE_CERERE)
         fun createViewInfoCerere(context: Context) = createIntent(context, ModalType.INFO_CERERE)
         fun createViewStatistica(context: Context) = createIntent(context, ModalType.STATISTICA)
+        fun createViewCerere(context: Context) = createIntent(context, ModalType.CERERE)
     }
 
     private var mType: ModalType? = null
@@ -78,11 +80,15 @@ class SecondaryActivity : BaseActivity() {
             }
             ModalType.DEPUNE_CERERE -> {
                 tv_title.text = getString(R.string.menu_depunere)
-                fragment = CerereFragment()
+                fragment = DepuneCerereFragment()
             }
             ModalType.INFO_CERERE -> {
                 tv_title.text= getString(R.string.menu_info)
                 fragment = InfoCerereFragment()
+            }
+            ModalType.CERERE -> {
+                tv_title.text= getString(R.string.fragment_cerere_titlu)
+                fragment = CerereFragment()
             }
             else -> {
                 Toast.makeText(this, R.string.view_eroare, Toast.LENGTH_SHORT).show()

@@ -117,4 +117,25 @@
     <style name="TextView.Blue">
         <item name="android:textColor">@color/colorAccent</item>
     </style>
+
+    <style name="TextView.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Subheading" parent="TextView">
+        <item name="android:textSize">@dimen/text_subheading</item>
+    </style>
+
+    <style name="TextView.Subheading.Blue" parent="TextView.Subheading">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextView.Subheading.Black" parent="TextView.Subheading">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Subheading.LightGrey" parent="TextView.Subheading">
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+
 </resources>

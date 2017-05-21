@@ -25,6 +25,7 @@
     <string name="cerere_empty_state_adaugare"><u>Depune Cerere</u></string>
     <string name="menu_info">Informatii Cereri</string>
     <string name="menu_depunere">Depune Cerere</string>
+    <string name="fragment_cerere_titlu">Cerere</string>
     <string name="menu_noi">Despre Noi</string>
     <string name="menu_contact">Contact Echipa</string>
     <string name="menu_statistica">Statistica</string>

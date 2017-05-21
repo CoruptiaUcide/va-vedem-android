@@ -51,7 +51,7 @@
                 android:background="@color/white"
                 android:clipToPadding="false"
                 android:paddingBottom="@dimen/space_micro"
-                android:paddingTop="@dimen/space_micro" />
+               />
 
 
             <LinearLayout

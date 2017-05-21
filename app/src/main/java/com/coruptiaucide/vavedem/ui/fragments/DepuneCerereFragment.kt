@@ -1,19 +1,19 @@
 package com.coruptiaucide.vavedem.ui.fragments
 
+import android.app.Fragment
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.coruptiaucide.vavedem.R
 
 /**
- * Created by tiberiugolaes on 07/05/2017.
+ * Created by tiberiugolaes on 02/05/2017.
  */
-class CerereFragment : BaseFragment() {
+class DepuneCerereFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_cerere, container, false)
+        val v = inflater.inflate(R.layout.fragment_depune_cerere, container, false)
         return v
     }
 
