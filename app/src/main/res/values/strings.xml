@@ -37,5 +37,7 @@
     <string name="trimite_email">Trimite mail...</string>
     <string name="eroare_email">Nu aveti client de e-mail instalat</string>
     <string name="primarii_search">Cauta primarii</string>
+    <string name="primarii_populatie" formatted="false">Populatie: %s</string>
+    <string name="cerere_empty_state_primarie_text">Primaria nu are nicio cerere inregistrata! Puteti depune prima cerere!</string>
     <string name="email_titlu"></string>
 </resources>

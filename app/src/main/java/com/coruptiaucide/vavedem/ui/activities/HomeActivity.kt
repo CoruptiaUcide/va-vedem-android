@@ -24,7 +24,6 @@ import com.coruptiaucide.vavedem.utils.SimpleDividerItemDecoration
 import kotlinx.android.synthetic.main.view_item_cerere.view.*
 
 
-
 class HomeActivity : BaseActivity() {
 
     internal var mAdapter: EmptyStateRecyclerView.SimpleAdapter<Cerere, CerereViewHolder>? = null
@@ -73,6 +72,8 @@ class HomeActivity : BaseActivity() {
         mAdapter = createAdapter()
         mRecyclerView.emptyView = findViewById(android.R.id.empty)
         mRecyclerView.adapter = mAdapter
+        cerereInfo.setOnClickListener { startActivity(SecondaryActivity.createViewInfoCerere(this@HomeActivity)) }
+        cerereAdd.setOnClickListener { startActivity(SecondaryActivity.createViewDepuneCerere(this@HomeActivity)) }
         mRecyclerView.addItemDecoration(SimpleDividerItemDecoration(ContextCompat.getDrawable(this@HomeActivity, R.drawable.simple_divider)))
         (cerereImg.background as LayerDrawable).findDrawableByLayerId(R.id.image)
                 .setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.colorAccent), PorterDuff.Mode.SRC_IN)
@@ -126,7 +127,7 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    internal class CerereViewHolder(itemView: View, activity: HomeActivity) : EmptyStateRecyclerView.SimpleViewHolder<Cerere>(itemView, activity) {
+    internal class CerereViewHolder(itemView: View, activity: BaseActivity) : EmptyStateRecyclerView.SimpleViewHolder<Cerere>(itemView, activity) {
         override fun bind(item: Cerere) {
             itemView.apply {
                 tvNume.text = item.primarie.nume
