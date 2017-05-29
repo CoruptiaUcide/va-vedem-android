@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/space_micro_small"
+    android:paddingLeft="@dimen/space_medium"
+    android:paddingRight="@dimen/space_medium"
+    android:paddingTop="@dimen/space_micro_small">
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        style="@style/TextView.Subheading.Blue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:text="0721458549" />
+
+    <TextView
+        android:id="@+id/tvNume"
+        style="@style/TextView.Black"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="@dimen/space_nano"
+        tools:text="Primaria Bucuresti Sector 1" />
+
+    <TextView
+        android:id="@+id/tvAdresa"
+        style="@style/TextView.Subheading.LightGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvNume"
+        android:layout_marginTop="@dimen/space_nano"
+        tools:text="Arinii Dornei nr 12 Bl I7" />
+
+    <com.coruptiaucide.vavedem.utils.TintedImageView
+        android:id="@+id/ivPrimarie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/space_medium"
+        android:paddingTop="@dimen/space_medium"
+        android:paddingBottom="@dimen/space_medium"
+        android:paddingRight="@dimen/space_micro"
+        android:src="@drawable/ic_arrow_forward_white_18dp"
+        android:tint="@color/light_blue" />
+</RelativeLayout>

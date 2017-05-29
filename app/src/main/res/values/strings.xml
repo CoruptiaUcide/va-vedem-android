@@ -30,6 +30,12 @@
     <string name="menu_contact">Contact Echipa</string>
     <string name="menu_statistica">Statistica</string>
     <string name="menu_primarii">Primarii</string>
+    <string name="primarie_empty_state_text">Incarcam primariile…</string>
+    <string name="primarie_fail_state_text">Nu am putut incarca primariile. Va rugam verificati-va conexiunea la internet si incercati din nou</string>
+    <string name="primarie_fail_state_retry"><u>INCARCA PRIMARIILE</u></string>
     <string name="view_eroare">View-ul nu a putut fi initializat</string>
+    <string name="trimite_email">Trimite mail...</string>
+    <string name="eroare_email">Nu aveti client de e-mail instalat</string>
+    <string name="primarii_search">Cauta primarii</string>
     <string name="email_titlu"></string>
 </resources>

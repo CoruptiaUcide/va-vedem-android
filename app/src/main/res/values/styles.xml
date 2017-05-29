@@ -109,6 +109,16 @@
         <item name="android:textSize">@dimen/text_small</item>
     </style>
 
+    <style name="TextView.Heading">
+        <item name="android:textSize">@dimen/text_heading</item>
+    </style>
+
+    <style name="TextView.Heading.Black" parent="TextView.Heading">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
 
     <style name="TextView.Small.Blue">
         <item name="android:textColor">@color/colorAccent</item>

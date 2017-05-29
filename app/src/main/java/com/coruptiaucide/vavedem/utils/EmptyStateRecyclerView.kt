@@ -108,7 +108,7 @@ open class EmptyStateRecyclerView : RecyclerView {
         }
     }
 
-    abstract class SimpleViewHolder<T>(itemView: View, activity: Activity) : RecyclerView.ViewHolder(itemView) {
+    abstract class SimpleViewHolder<T>(itemView: View, activity: Activity?) : RecyclerView.ViewHolder(itemView) {
         abstract fun bind(item: T)
     }
 

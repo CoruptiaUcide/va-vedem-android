@@ -17,19 +17,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.FirstActivity" />
+        <activity
+            android:name=".ui.activities.FirstActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.LoginActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".ui.activities.RegisterActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".ui.activities.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/LoginTheme" />
-        <activity android:name=".ui.activities.HomeActivity" />
+        <activity
+            android:name=".ui.activities.HomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.SecondaryActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/LoginTheme" />
+
+        <activity
+            android:name=".ui.activities.PrimarieActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>

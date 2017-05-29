@@ -1,5 +1,6 @@
 package com.coruptiaucide.vavedem.ui.activities
 
+import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
@@ -7,7 +8,11 @@ import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import android.support.v7.widget.SearchView
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import com.coruptiaucide.vavedem.R
 import com.coruptiaucide.vavedem.ui.fragments.*
@@ -83,11 +88,11 @@ class SecondaryActivity : BaseActivity() {
                 fragment = DepuneCerereFragment()
             }
             ModalType.INFO_CERERE -> {
-                tv_title.text= getString(R.string.menu_info)
+                tv_title.text = getString(R.string.menu_info)
                 fragment = InfoCerereFragment()
             }
             ModalType.CERERE -> {
-                tv_title.text= getString(R.string.fragment_cerere_titlu)
+                tv_title.text = getString(R.string.fragment_cerere_titlu)
                 fragment = CerereFragment()
             }
             else -> {
@@ -115,5 +120,16 @@ class SecondaryActivity : BaseActivity() {
     override fun finish() {
         super.finish()
         overridePendingTransition(0, R.anim.anim_slide_jos)
+    }
+
+    fun sendEmail(recipient: String) {
+        val i = Intent(Intent.ACTION_SEND)
+        i.type = "message/rfc822"
+        i.putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
+        try {
+            startActivity(Intent.createChooser(i, resources.getString(R.string.trimite_email)))
+        } catch (ex: android.content.ActivityNotFoundException) {
+            Toast.makeText(this@SecondaryActivity, R.string.eroare_email, Toast.LENGTH_LONG).show()
+        }
     }
 }

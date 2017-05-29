@@ -20,13 +20,9 @@ import com.coruptiaucide.vavedem.utils.DateExtensions.toMediumDateString
 import android.graphics.drawable.LayerDrawable
 import android.net.Uri
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
-import com.coruptiaucide.vavedem.api.model.Adresa
-import com.coruptiaucide.vavedem.api.model.Primarie
 import com.coruptiaucide.vavedem.utils.SimpleDividerItemDecoration
-import com.coruptiaucide.vavedem.utils.SpaceDividerItemDecoration
 import kotlinx.android.synthetic.main.view_item_cerere.view.*
-import java.util.*
+
 
 
 class HomeActivity : BaseActivity() {
@@ -80,7 +76,6 @@ class HomeActivity : BaseActivity() {
         mRecyclerView.addItemDecoration(SimpleDividerItemDecoration(ContextCompat.getDrawable(this@HomeActivity, R.drawable.simple_divider)))
         (cerereImg.background as LayerDrawable).findDrawableByLayerId(R.id.image)
                 .setColorFilter(ContextCompat.getColor(this@HomeActivity, R.color.colorAccent), PorterDuff.Mode.SRC_IN)
-        var mockedList = ArrayList<Cerere>()
         mAdapter!!.setData(emptyList())
     }
 
@@ -140,6 +135,5 @@ class HomeActivity : BaseActivity() {
                 ivCerere.setOnClickListener { context.startActivity(SecondaryActivity.createViewCerere(context)) }
             }
         }
-
     }
 }

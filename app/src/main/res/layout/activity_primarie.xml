@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/controlHighlight"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/primarie_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:background="@android:color/transparent"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/back_layout"
+                    android:layout_width="@dimen/space_large"
+                    android:layout_height="@dimen/space_large"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_small">
+
+                    <com.coruptiaucide.vavedem.utils.TintedImageView
+                        android:id="@+id/primarie_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_ab_back_material"
+                        app:tintColor="@color/black" />
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/primarieTitle"
+                        style="@style/TextView.Heading.Black"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:id="@+id/primarieAdresa"
+                        style="@style/TextView.Subheading.LightGrey"
+                        android:layout_below="@+id/primarieTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/space_micro" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

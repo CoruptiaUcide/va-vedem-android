@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
+    <com.coruptiaucide.vavedem.utils.EmptyStateRecyclerView
+        android:id="@+id/rv_primarii"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/space_micro"
+        tools:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_medium"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/primariiImg"
+            android:layout_width="@dimen/space_huge"
+            android:layout_height="@dimen/space_huge"
+            android:tint="@color/light_blue" />
+
+        <TextView
+            android:id="@+id/primariiText"
+            style="@style/TextView.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/primariiImg"
+            android:layout_marginTop="@dimen/space_large"
+            android:text="@string/primarie_empty_state_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/failPrimarii"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_medium"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.coruptiaucide.vavedem.utils.TintedImageView
+            android:id="@+id/failImg"
+            android:layout_width="@dimen/space_huge"
+            android:layout_height="@dimen/space_huge"
+            android:src="@drawable/ic_portable_wifi_off_white_48dp"
+            android:tint="@color/light_blue" />
+
+        <TextView
+            android:id="@+id/failText"
+            style="@style/TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large"
+            android:text="@string/primarie_fail_state_text" />
+
+        <TextView
+            android:id="@+id/retryText"
+            style="@style/TextView.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_micro"
+            android:text="@string/primarie_fail_state_retry" />
+    </LinearLayout>
 </LinearLayout>
